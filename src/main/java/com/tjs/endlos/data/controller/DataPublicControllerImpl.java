@@ -17,6 +17,7 @@ package com.tjs.endlos.data.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,7 +41,7 @@ public class DataPublicControllerImpl implements DataPublicController {
 
 	@Override
 	@AccessLog
-	@SendTo("/topic/data")
+//	@SendTo("/topic/data")
 	public Response getCounter(@RequestBody DataView dataView) throws EndlosException {
 		if (dataView == null) {
 			throw new EndlosException(ResponseCode.INVALID_REQUEST.getCode(),
@@ -48,6 +49,14 @@ public class DataPublicControllerImpl implements DataPublicController {
 		}
 		DataView.isValid(dataView);
 		return dataOperation.doGetCounter(dataView);
+		
 	}
+
+	@Override
+	@AccessLog
+	public void sendMessage() throws EndlosException {
+		
+	}
+
 
 }

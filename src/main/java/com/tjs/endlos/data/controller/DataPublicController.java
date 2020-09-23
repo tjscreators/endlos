@@ -15,7 +15,6 @@
  ******************************************************************************/
 package com.tjs.endlos.data.controller;
 
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -39,4 +38,16 @@ public interface DataPublicController extends Controller {
 	@ResponseBody
 	@AccessLog
 	Response getCounter(DataView dataView) throws EndlosException;
+	
+	/**
+	 * this api for update or get counter of entry
+	 * 
+	 * @param dataView
+	 * @return
+	 * @throws EndlosException
+	 */
+	@RequestMapping(value = "/send-message", method = RequestMethod.POST)
+	@ResponseBody
+	@AccessLog
+	void sendMessage() throws EndlosException;
 }

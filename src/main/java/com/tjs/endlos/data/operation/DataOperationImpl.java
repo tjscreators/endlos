@@ -16,6 +16,7 @@
 package com.tjs.endlos.data.operation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,6 +41,10 @@ public class DataOperationImpl implements DataOperation {
 
 	@Autowired
 	private DataService dataService;
+	
+	
+	@Autowired
+	private SimpMessagingTemplate template;
 
 	@Override
 	public Response doGetCounter(DataView dataView) throws EndlosException {
@@ -62,8 +67,10 @@ public class DataOperationImpl implements DataOperation {
 		} else if (dataView.getIsFinish()) {
 			dataModel = createModel();
 		}
+		DataView responseDataView = fromModel(dataModel, new DataView());
+		this.template.convertAndSend("/topic/data", responseDataView.toString());
 		return ViewResponse.create(ResponseCode.SUCCESSFUL.getCode(), ResponseCode.SUCCESSFUL.getMessage(),
-				fromModel(dataModel, new DataView()));
+				responseDataView);
 	}
 
 	public DataView fromModel(DataModel dataModel, DataView dataView) {

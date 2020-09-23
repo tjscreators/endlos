@@ -62,4 +62,9 @@ public class DataView extends IdentifierView {
 		}
 	}
 
+	@Override
+	public String toString() {
+		return "DataView [entryId=" + entryId + ", isCount=" + isCount + ", isFinish=" + isFinish + "]";
+	}
+
 }
