@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.tjs.endlos.operation;
+package com.tjs.endlos.data.operation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -23,10 +23,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.tjs.common.enums.ResponseCode;
 import com.tjs.common.response.Response;
 import com.tjs.common.response.ViewResponse;
+import com.tjs.endlos.data.model.DataModel;
+import com.tjs.endlos.data.service.DataService;
+import com.tjs.endlos.data.view.DataView;
 import com.tjs.endlos.exception.EndlosException;
-import com.tjs.endlos.model.DataModel;
-import com.tjs.endlos.service.DataService;
-import com.tjs.endlos.view.DataView;
 
 /**
  * This class used to perform all business operation on data model.

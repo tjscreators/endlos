@@ -13,24 +13,21 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.tjs.endlos.model;
+package com.tjs.endlos.data.operation;
 
-import com.tjs.common.model.IdentifierModel;
+import com.tjs.common.operation.Operation;
+import com.tjs.common.response.Response;
+import com.tjs.endlos.data.view.DataView;
+import com.tjs.endlos.exception.EndlosException;
 
-public class DataModel extends IdentifierModel {
+public interface DataOperation extends Operation {
 
 	/**
+	 * this method for get and update counter.
 	 * 
+	 * @param dataView
+	 * @return
+	 * @throws EndlosException
 	 */
-	private static final long serialVersionUID = 6626269962528919100L;
-	private Long entryId;
-
-	public Long getEntryId() {
-		return entryId;
-	}
-
-	public void setEntryId(Long entryId) {
-		this.entryId = entryId;
-	}
-
+	Response doGetCounter(DataView dataView) throws EndlosException;
 }

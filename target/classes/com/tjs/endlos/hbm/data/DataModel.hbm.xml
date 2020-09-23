@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.tjs.endlos.model">
+<hibernate-mapping package="com.tjs.endlos.data.model">
 	<class entity-name="dataModel" name="DataModel" table="tbldata"	dynamic-update="true" dynamic-insert="true">
 		<id name="id" column="pkid" type="java.lang.Long">
 			<generator class="identity" />

@@ -13,29 +13,39 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.tjs.endlos.controller;
+package com.tjs.endlos.data.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tjs.common.aop.AccessLog;
-import com.tjs.common.controller.Controller;
+import com.tjs.common.enums.ResponseCode;
 import com.tjs.common.response.Response;
+import com.tjs.endlos.data.operation.DataOperation;
+import com.tjs.endlos.data.view.DataView;
 import com.tjs.endlos.exception.EndlosException;
-import com.tjs.endlos.view.DataView;
 
-public interface DataPublicController extends Controller {
+/**
+ * this controller for handle data related apis
+ */
+@Controller
+@RequestMapping("/public/data")
+public class DataPublicControllerImpl implements DataPublicController {
 
-	/**
-	 * this api for update or get counter of entry
-	 * 
-	 * @param dataView
-	 * @return
-	 * @throws EndlosException
-	 */
-	@RequestMapping(value = "/get-counter", method = RequestMethod.POST)
-	@ResponseBody
+	@Autowired
+	private DataOperation dataOperation;
+
+	@Override
 	@AccessLog
-	Response getCounter(DataView dataView) throws EndlosException;
+	public Response getCounter(@RequestBody DataView dataView) throws EndlosException {
+		if (dataView == null) {
+			throw new EndlosException(ResponseCode.INVALID_REQUEST.getCode(),
+					ResponseCode.INVALID_REQUEST.getMessage());
+		}
+		DataView.isValid(dataView);
+		return dataOperation.doGetCounter(dataView);
+	}
+
 }

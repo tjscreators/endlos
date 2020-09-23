@@ -13,21 +13,19 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.tjs.endlos.operation;
+package com.tjs.endlos.data.service;
 
-import com.tjs.common.operation.Operation;
-import com.tjs.common.response.Response;
-import com.tjs.endlos.exception.EndlosException;
-import com.tjs.endlos.view.DataView;
+import com.tjs.common.service.BaseService;
+import com.tjs.endlos.data.model.DataModel;
 
-public interface DataOperation extends Operation {
+public interface DataService extends BaseService<DataModel> {
+
+	String DATA_MODEL = "dataModel";
 
 	/**
-	 * this method for get and update counter.
+	 * this method for get latest counter model.
 	 * 
-	 * @param dataView
 	 * @return
-	 * @throws EndlosException
 	 */
-	Response doGetCounter(DataView dataView) throws EndlosException;
+	DataModel get();
 }

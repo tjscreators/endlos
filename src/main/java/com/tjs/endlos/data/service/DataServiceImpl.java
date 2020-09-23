@@ -13,14 +13,14 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.tjs.endlos.service;
+package com.tjs.endlos.data.service;
 
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Order;
 import org.springframework.stereotype.Service;
 
 import com.tjs.common.service.AbstractService;
-import com.tjs.endlos.model.DataModel;
+import com.tjs.endlos.data.model.DataModel;
 
 @Service(value = "dataService")
 public class DataServiceImpl extends AbstractService<DataModel> implements DataService {

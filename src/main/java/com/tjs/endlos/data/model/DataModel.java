@@ -13,19 +13,24 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  ******************************************************************************/
-package com.tjs.endlos.service;
+package com.tjs.endlos.data.model;
 
-import com.tjs.common.service.BaseService;
-import com.tjs.endlos.model.DataModel;
+import com.tjs.common.model.IdentifierModel;
 
-public interface DataService extends BaseService<DataModel> {
-
-	String DATA_MODEL = "dataModel";
+public class DataModel extends IdentifierModel {
 
 	/**
-	 * this method for get latest counter model.
 	 * 
-	 * @return
 	 */
-	DataModel get();
+	private static final long serialVersionUID = 6626269962528919100L;
+	private Long entryId;
+
+	public Long getEntryId() {
+		return entryId;
+	}
+
+	public void setEntryId(Long entryId) {
+		this.entryId = entryId;
+	}
+
 }
