@@ -19,7 +19,6 @@ com\tjs\common\kernal\ApplicationListenerBean.class
 com\tjs\common\location\view\CountryView.class
 com\tjs\common\logger\Notification.class
 com\tjs\common\user\controller\RolePrivateControllerImpl.class
-com\tjs\endlos\view\DataView.class
 com\tjs\common\user\view\RoleView.class
 com\tjs\common\config\threadpool\AsyncConfiguration.class
 com\tjs\common\sms\service\SmsTransactionService.class
@@ -42,7 +41,6 @@ com\tjs\common\file\view\FileView.class
 com\tjs\common\setting\model\SettingConfig.class
 com\tjs\common\file\controller\FilePrivateControllerImpl.class
 com\tjs\common\view\CheckerView.class
-com\tjs\endlos\operation\DataOperation.class
 com\tjs\common\model\ActivationModel.class
 com\tjs\common\user\operation\RoleOperationImpl.class
 com\tjs\common\captcha\controller\CaptchaPublicControllerImpl.class
@@ -50,6 +48,7 @@ com\tjs\common\response\CommonResponse.class
 com\tjs\common\user\controller\GroupController.class
 com\tjs\common\email\view\EmailAccountView.class
 com\tjs\common\view\KeyValueView$1.class
+com\tjs\endlos\data\operation\DataOperationImpl.class
 com\tjs\common\file\enums\FileTemplateEnum.class
 com\tjs\common\location\controller\CityControllerImpl.class
 com\tjs\common\email\controller\EmailAccountControllerImpl.class
@@ -81,6 +80,7 @@ com\tjs\common\sms\model\SmsTransactionModel.class
 com\tjs\common\location\operation\CountryOperation.class
 com\tjs\common\captcha\operation\CaptchaOperation.class
 com\tjs\common\client\service\ClientServiceImpl.class
+com\tjs\endlos\data\view\DataView.class
 com\tjs\common\user\controller\RightsControllerImpl.class
 com\tjs\common\user\service\GroupService.class
 com\tjs\common\setting\model\SettingModel.class
@@ -122,6 +122,7 @@ com\tjs\common\location\service\TimeZoneService.class
 com\tjs\common\user\controller\AppController.class
 com\tjs\common\sms\service\SmsContentService.class
 com\tjs\common\sms\thread\SmsThread.class
+com\tjs\endlos\data\controller\DataPublicController.class
 com\tjs\common\startup\EveryRequestFilter.class
 com\tjs\common\validation\Validator$1.class
 com\tjs\common\email\controller\EmailAccountController.class
@@ -132,7 +133,7 @@ com\tjs\common\sms\model\SmsContentModel.class
 com\tjs\common\view\ActivationView.class
 com\tjs\common\util\HashUtil$2.class
 com\tjs\common\client\controller\ClientPublicControllerImpl.class
-com\tjs\endlos\operation\DataOperationImpl.class
+com\tjs\endlos\data\operation\DataOperation.class
 com\tjs\common\email\service\TransactionalEmailServiceImpl.class
 com\tjs\common\service\BaseService.class
 com\tjs\common\util\Constant.class
@@ -146,8 +147,8 @@ com\tjs\common\user\enums\UserGenderEnum.class
 com\tjs\common\file\enums\DataSheetFileExtensionEnum.class
 com\tjs\common\validation\Validator$3.class
 com\tjs\common\util\HashUtil.class
-com\tjs\endlos\service\DataServiceImpl.class
 com\tjs\common\user\service\GroupServiceImpl.class
+com\tjs\endlos\data\controller\DataPublicControllerImpl.class
 com\tjs\common\file\service\FileServiceImpl.class
 com\tjs\common\email\service\EmailContentService.class
 com\tjs\common\view\AuditableView.class
@@ -168,6 +169,7 @@ com\tjs\common\user\operation\UserOperationImpl.class
 com\tjs\common\user\service\RightsServiceImpl.class
 com\tjs\common\service\AbstractService.class
 com\tjs\common\user\controller\UserPublicController.class
+com\tjs\endlos\data\model\DataModel.class
 com\tjs\common\aop\AccessedByClientAspect.class
 com\tjs\endlos\email\enums\CommunicationTriggerEnum.class
 com\tjs\common\user\controller\UserPublicControllerImpl.class
@@ -193,6 +195,7 @@ com\tjs\common\location\controller\CityController.class
 com\tjs\common\file\enums\ImageFileExtensionEnum.class
 com\tjs\common\user\model\UserModel.class
 com\tjs\common\user\model\RoleModel.class
+com\tjs\endlos\data\service\DataService.class
 com\tjs\common\user\controller\ModuleControllerImpl.class
 com\tjs\common\user\service\UserPasswordService.class
 com\tjs\common\setting\view\SettingView.class
@@ -207,6 +210,7 @@ com\tjs\common\user\model\RoleModuleRightsModel.class
 com\tjs\common\setting\operation\SettingOperation.class
 com\tjs\common\sms\service\SmsAccountServiceImpl.class
 com\tjs\common\location\controller\CountryControllerImpl.class
+com\tjs\common\websocketconfig\WebSocketConfig.class
 com\tjs\endlos\email\enums\CommunicationTriggerEnum$2.class
 com\tjs\common\model\IdentifierModel.class
 com\tjs\common\sms\service\SmsAccountService.class
@@ -214,19 +218,16 @@ com\tjs\common\email\service\EmailAccountServiceImpl.class
 com\tjs\common\response\FormErrorResponse.class
 com\tjs\common\location\operation\StateOperationImpl.class
 com\tjs\common\view\PageResultView.class
-com\tjs\endlos\service\DataService.class
 com\tjs\common\user\service\AppServiceImpl.class
 com\tjs\common\validation\Validator$17.class
 com\tjs\endlos\exception\EndlosExceptionHanlder.class
 com\tjs\common\file\controller\FilePublicController.class
-com\tjs\endlos\controller\DataPublicControllerImpl.class
 com\tjs\common\validation\Validator$11.class
 com\tjs\common\captcha\service\CaptchaServiceImpl.class
 com\tjs\common\client\service\ClientService.class
 com\tjs\common\sms\service\SmsContentServiceImpl.class
 com\tjs\common\user\enums\ModuleEnum.class
 com\tjs\common\validation\Validator$13.class
-com\tjs\endlos\controller\DataPublicController.class
 com\tjs\common\view\IdNameView$1.class
 com\tjs\common\validation\Validator$6.class
 com\tjs\common\email\service\EmailContentServiceImpl.class
@@ -279,7 +280,6 @@ com\tjs\common\startup\EndlosWebConfig.class
 com\tjs\common\user\service\RoleService.class
 com\tjs\common\validation\Validator$8.class
 com\tjs\common\client\controller\ClientPrivateController.class
-com\tjs\endlos\model\DataModel.class
 com\tjs\common\captcha\controller\CaptchaController.class
 com\tjs\common\validation\Validator$15.class
 com\tjs\common\validation\ValidationType$2.class
@@ -300,6 +300,7 @@ com\tjs\common\validation\Validator$9.class
 com\tjs\common\validation\Validator.class
 com\tjs\common\threadlocal\Auditor.class
 com\tjs\common\email\model\EmailContentModel.class
+com\tjs\endlos\data\service\DataServiceImpl.class
 com\tjs\common\email\model\EmailAccountModel.class
 com\tjs\common\setting\service\SettingService.class
 com\tjs\common\validation\ValidationType$3.class
