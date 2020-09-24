@@ -68,7 +68,7 @@ public class DataOperationImpl implements DataOperation {
 			dataModel = createModel();
 		}
 		DataView responseDataView = fromModel(dataModel, new DataView());
-		this.template.convertAndSend("/topic/data", responseDataView.toString());
+		this.template.convertAndSend("/topic/data", responseDataView);
 		return ViewResponse.create(ResponseCode.SUCCESSFUL.getCode(), ResponseCode.SUCCESSFUL.getMessage(),
 				responseDataView);
 	}
